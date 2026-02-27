@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>درسنامه اسلام و حقوق بشر — جلسه اول</title>
+  <style>
+    /* ===== فونت و رنگ‌بندی کلی ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
+    :root {
+      --primary:   #1a4f7a;
+      --secondary: #2e7d9f;
+      --accent:    #e8a020;
+      --danger:    #c0392b;
+      --warning:   #e67e22;
+      --success:   #27ae60;
+      --bg:        #f4f7fb;
+      --card:      #ffffff;
+      --border:    #d0dce8;
+      --text:      #1c2b3a;
+      --muted:     #5a7080;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 2;
+      font-size: 16px;
+    }
+
+    /* ===== هدر ===== */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.88;
+    }
+
+    header .badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 4px 18px;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+    }
+
+    /* ===== لایه‌بندی اصلی ===== */
+    .container {
+      max-width: 900px;
+      margin: 36px auto;
+      padding: 0 16px;
+    }
+
+    /* ===== فهرست مطالب ===== */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-right: 5px solid var(--primary);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .toc h2 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc ol {
+      padding-right: 20px;
+    }
+
+    .toc li {
+      margin: 6px 0;
+    }
+
+    .toc a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .toc ol ol {
+      margin-top: 4px;
+      padding-right: 18px;
+    }
+
+    /* ===== کارت‌های بخش ===== */
+    .section-card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    /* ===== تیترها ===== */
+    h1.sec {
+      font-size: 1.55rem;
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2.sec {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      border-right: 4px solid var(--secondary);
+      padding-right: 12px;
+      margin: 24px 0 14px;
+    }
+
+    h3.sec {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin: 18px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    h4.sec {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin: 14px 0 8px;
+      font-weight: 600;
+    }
+
+    /* ===== پاراگراف و لیست ===== */
+    p {
+      margin: 10px 0;
+      line-height: 2.1;
+    }
+
+    ul, ol {
+      padding-right: 22px;
+      margin: 10px 0;
+    }
+
+    li {
+      margin: 6px 0;
+      line-height: 2;
+    }
+
+    strong {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ===== بلاک تعریف (📌) ===== */
+    .definition {
+      background: #eaf4fb;
+      border-right: 5px solid var(--secondary);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.97rem;
+    }
+
+    .definition .def-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===== بلاک مثال (💡) ===== */
+    .example {
+      background: #fffbea;
+      border: 1px dashed var(--accent);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+    }
+
+    .example .ex-title {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===== اختلاف نظر (⚡) ===== */
+    .dispute {
+      background: #fff3e0;
+      border-right: 5px solid var(--warning);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+    }
+
+    .dispute .dis-title {
+      font-weight: 700;
+      color: var(--warning);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===== هشدار / تذکر ===== */
+    .warning-box {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-right: 5px solid var(--accent);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+
+    /* ===== اشتباه / اصلاحیه ===== */
+    .correction {
+      background: #fdecea;
+      border: 1px solid #f5c6cb;
+      border-right: 5px solid var(--danger);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+
+    .correction .cor-title {
+      font-weight: 700;
+      color: var(--danger);
+      margin-bottom: 6px;
+    }
+
+    /* ===== توضیح هوش مصنوعی ===== */
+    .ai-note {
+      background: #f0f4ff;
+      border: 1px solid #c5cfe8;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+      color: #3a4a6b;
+      font-style: italic;
+    }
+
+    /* ===== جدول ===== */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    thead tr {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: right;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f0f6fb;
+    }
+
+    /* ===== منابع ===== */
+    .source-card {
+      background: #f9fbfd;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .source-card .src-num {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    .source-card .src-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .source-card .src-detail {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ===== نکات کنکوری ===== */
+    .exam-box {
+      background: linear-gradient(135deg, #eafaf1 0%, #d5f5e3 100%);
+      border: 1px solid #a9dfbf;
+      border-right: 5px solid var(--success);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 14px 0;
+    }
+
+    .exam-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exam-box ul li {
+      padding: 6px 0 6px 0;
+      border-bottom: 1px dashed #a9dfbf;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .exam-box ul li:last-child {
+      border-bottom: none;
+    }
+
+    .exam-box ul li::before {
+      content: "✅";
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ===== یادداشت پایانی ===== */
+    .final-note {
+      background: linear-gradient(135deg, #eaf4fb, #dbeeff);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 20px;
+      border: 1px solid #b3d4f0;
+      text-align: center;
+      font-size: 0.97rem;
+      color: var(--primary);
+    }
+
+    /* ===== جداکننده ===== */
+    hr {
+      border: none;
+      border-top: 2px dashed var(--border);
+      margin: 30px 0;
+    }
+
+    /* ===== فوتر ===== */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* ===== ریسپانسیو ===== */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      .section-card { padding: 18px 16px; }
+      h1.sec { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 درسنامه جامع و ساختاریافته</h1>
+  <h2>اسلام و حقوق بشر</h2>
+  <div class="badge">جلسه اول</div>
+</header>
+
+<div class="container">
+
+  <!-- فهرست مطالب -->
+  <nav class="toc">
+    <h2>📋 فهرست مطالب</h2>
+    <ol>
+      <li><a href="#sec1">مقدمه و معرفی درس</a>
+        <ol>
+          <li><a href="#sec1-1">ماهیت و جایگاه درس</a></li>
+          <li><a href="#sec1-2">اهداف یادگیری درس</a></li>
+          <li><a href="#sec1-3">اهمیت درس برای ادامه تحصیل</a></li>
+        </ol>
+      </li>
+      <li><a href="#sec2">منابع پیشنهادی برای مطالعه</a></li>
+      <li><a href="#sec3">شیوه ارزیابی و امتحان</a>
+        <ol>
+          <li><a href="#sec3-1">ساختار کلاس‌ها</a></li>
+          <li><a href="#sec3-2">شیوه ارزیابی</a></li>
+          <li><a href="#sec3-3">تهیه جزوه کلاسی (فرصت تشویقی)</a></li>
+        </ol>
+      </li>
+      <li><a href="#sec4">سرفصل‌های درس</a>
+        <ol>
+          <li><a href="#sec4-1">مباحث مقدماتی (پایه)</a></li>
+          <li><a href="#sec4-2">مباحث اصلی و اختصاصی</a></li>
+          <li><a href="#sec4-3">جلسه پایانی</a></li>
+          <li><a href="#sec4-4">مباحث احتمالی</a></li>
+        </ol>
+      </li>
+      <li><a href="#sec5">مفهوم حق</a>
+        <ol>
+          <li><a href="#sec5-1">تعریف لغوی حق</a></li>
+          <li><a href="#sec5-2">حق به مثابه مفهومی سهل‌وممتنع</a></li>
+          <li><a href="#sec5-3">تعاریف حق از منظر اندیشمندان اسلامی</a></li>
+        </ol>
+      </li>
+      <li><a href="#sec6">نکات ظریف و کنکوری جلسه اول</a></li>
+    </ol>
+  </nav>
+
+  <!-- بخش ۱ -->
+  <section class="section-card" id="sec1">
+    <h1 class="sec">🎓 ۱. مقدمه و معرفی درس</h1>
+
+    <h2 class="sec" id="sec1-1">۱.۱ ماهیت و جایگاه درس</h2>
+    <ul>
+      <li><strong>نام درس:</strong> اسلام و حقوق بشر</li>
+      <li><strong>نوع درس:</strong> اختیاری برای دانشجویان رشته حقوق</li>
+      <li><strong>اهمیت درس:</strong> با توجه به مباحث گسترده‌ای که در حوزه حقوق بشر در ایران و جهان اسلام مطرح است، این درس اختیاری از <strong>موضوعیت بالایی</strong> برخوردار است.</li>
+    </ul>
+
+    <h2 class="sec" id="sec1-2">۱.۲ اهداف یادگیری درس</h2>
+    <p>استاد اهداف اصلی این درس را به‌شرح زیر تبیین کرد:</p>
+    <ol>
+      <li>شناخت مسائل حقوق بشر در کشور (ایران)</li>
+      <li>آشنایی با <strong>نگاه دنیای غرب</strong> به مسئله حقوق بشر</li>
+      <li>توانایی تشخیص <strong>تمایزات و تفاوت‌های حقوق بشر اسلامی</strong> با آنچه به عنوان حقوق بشر در غرب شناخته می‌شود</li>
+    </ol>
+
+    <h2 class="sec" id="sec1-3">۱.۳ اهمیت درس برای ادامه تحصیل</h2>
+    <ul>
+      <li>اگر دانشجو در آینده قصد انتخاب <strong>گرایش حقوق عمومی</strong> در مقطع ارشد را دارد، مطالعه مباحث حقوق بشر — چه اسلامی و چه غربی — از هم‌اکنون ضرورت دارد.</li>
+      <li>مباحث این درس با دروس تخصصی <strong>حقوق بشر در اسلام</strong> در مقاطع بالاتر پیوند مستقیم دارد.</li>
+    </ul>
+  </section>
+
+  <!-- بخش ۲ -->
+  <section class="section-card" id="sec2">
+    <h1 class="sec">📚 ۲. منابع پیشنهادی برای مطالعه</h1>
+
+    <div class="warning-box">
+      ⚠️ <strong>تذکر مهم استاد:</strong> مطالعه این منابع برای امتحان <strong>الزامی نیست</strong> و صرفاً جهت مطالعه آزاد و تعمیق دانش معرفی شده‌اند. مبنای امتحان، <strong>مباحث کلاسی</strong> خواهد بود.
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع اول</span>
+      <span class="src-title">نقد مبانی فلسفی حقوق بشر</span>
+      <span class="src-detail">با عنوان فرعی: <strong>فلسفه اسلامی حقوق بشر</strong></span>
+      <span class="src-detail">نویسنده: <strong>محمدجواد جاوید</strong> | ناشر: نشر مخاطب</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع دوم</span>
+      <span class="src-title">نقد مبانی فلسفی حقوق بشر</span>
+      <span class="src-detail">با عنوان فرعی: <strong>فلسفه طبیعی حقوق بشر</strong></span>
+      <span class="src-detail">نویسنده: <strong>محمدجواد جاوید</strong> | ناشر: نشر مخاطب</span>
+      <span class="src-detail"><em>(توضیح: هر دو کتاب از یک نویسنده‌اند؛ اولی محور اسلامی و دومی محور فلسفه طبیعی دارد.)</em></span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع سوم</span>
+      <span class="src-title">رویکرد جدید به حقوق بشر در اسلام و ایران با نگاهی به مکاتب حقوق بشر غربی</span>
+      <span class="src-detail">نویسنده: <strong>محمد چکوری</strong> <em>(تلفظ و ضبط دقیق نام نویسنده در متن اصلی با ابهام همراه بود — نیاز به بازشنوایی فایل صوتی)</em></span>
+      <span class="src-detail">ناشر: نشر نوروزی</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع چهارم</span>
+      <span class="src-title">اسلام و حقوق بشر</span>
+      <span class="src-detail">نویسنده: <strong>زین‌العابدین قربانی</strong> | ناشر: نشر سایه</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع پنجم</span>
+      <span class="src-title">حقوق بشر در نهج‌البلاغه</span>
+      <span class="src-detail">نویسنده: <strong>فاطمه تهرانی‌دوست</strong> | ناشر: نشر منیر</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع ششم</span>
+      <span class="src-title">حقوق بشر در اسلام</span>
+      <span class="src-detail">نویسنده: <strong>ابراهیم موسی‌زاده</strong> | ناشر: نشر خرسندی</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع هفتم</span>
+      <span class="src-title">اسلام و حقوق بشر</span>
+      <span class="src-detail">نویسنده: <strong>سجاد مظفری‌زاده</strong> | ناشر: نشر پندار پارس</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع هشتم</span>
+      <span class="src-title">درآمدی بر حقوق اسلامی</span>
+      <span class="src-detail">نویسنده: مجموعه‌ای از نویسندگان، تحت نظارت <strong>دفتر همکاری حوزه و دانشگاه</strong></span>
+      <span class="src-detail"><strong>بخش مرتبط با این درس:</strong> بخش چهارم کتاب (مبحث حقوق بشر)</span>
+      <span class="src-detail"><em>(توضیح استاد: این بخش به‌صورت مختصر مباحث حقوق بشر را معرفی کرده و برای آشنایی اولیه مناسب است.)</em></span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع نهم</span>
+      <span class="src-title">مبانی حقوق بشر از دیدگاه اسلام و دیگر مکاتب</span>
+      <span class="src-detail">نویسندگان: <strong>سید صادق حقیقت</strong> و <strong>سید علی میرموسوی</strong></span>
+      <span class="src-detail">ناشر: پژوهشگاه فرهنگ و اندیشه اسلامی</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع دهم</span>
+      <span class="src-title">حقوق بشر از دیدگاه اسلام</span>
+      <span class="src-detail">مشتمل بر آرای دانشمندان و اندیشمندان ایرانی در خصوص حقوق بشر</span>
+      <span class="src-detail">ناشر: نشر بین‌المللی الهدی</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع یازدهم</span>
+      <span class="src-title">مبانی حقوق بشر در اسلام و دنیای معاصر</span>
+      <span class="src-detail">نویسنده: <strong>عباسعلی حمیدزنجانی</strong> <em>(از چهره‌های برجسته دانشگاهی؛ رئیس دانشگاه تهران در دوره ریاست‌جمهوری احمدی‌نژاد در دهه ۸۰)</em></span>
+      <span class="src-detail">ناشر: نشر مجد</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع دوازدهم</span>
+      <span class="src-title">حقوق بشر بین‌المللی از منظر اسلام</span>
+      <span class="src-detail">نویسنده: <strong>عباسعلی حمیدزنجانی</strong> | ناشر: انتشارات دانشگاه تهران</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع سیزدهم</span>
+      <span class="src-title">حقوق بشر در اسلام</span>
+      <span class="src-detail">نویسندگان: <strong>علی بهادری</strong> و <strong>سید لطیفه حسینی</strong> | ناشر: نشر پژواک عدالت</span>
+    </div>
+
+    <div class="source-card">
+      <span class="src-num">📌 منبع چهاردهم</span>
+      <span class="src-title">نظام حقوق بشر اسلامی</span>
+      <span class="src-detail">به اهتمام: <strong>سید عزیزالله موسوی</strong> | ناشر: انتشارات مکث اندیشه</span>
+    </div>
+  </section>
+
+  <!-- بخش ۳ -->
+  <section class="section-card" id="sec3">
+    <h1 class="sec">📝 ۳. شیوه ارزیابی و امتحان</h1>
+
+    <h2 class="sec" id="sec3-1">۳.۱ ساختار کلاس‌ها</h2>
+    <ul>
+      <li>تعداد جلسات: <strong>حداقل ۱۰ جلسه</strong> و احتمالاً تا <strong>۱۲ جلسه</strong></li>
+    </ul>
+
+    <h2 class="sec" id="sec3-2">۳.۲ شیوه ارزیابی</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>مؤلفه</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>امتحان میان‌ترم</strong></td><td><strong>ندارد</strong></td></tr>
+          <tr><td><strong>امتحان پایان‌ترم</strong></td><td>دارد — به صورت <strong>تشریحی</strong></td></tr>
+          <tr><td><strong>مبنای امتحان</strong></td><td><strong>مباحث کلاسی</strong> (نه کتاب خاص)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warning-box">
+      ⚠️ <strong>تذکر استاد:</strong> شیوه تشریحی در صورتی اجرا می‌شود که شرایط عادی باشد. در صورت بروز اتفاقات پیش‌بینی‌نشده، شیوه برگزاری ممکن است تغییر کند.
+    </div>
+
+    <h2 class="sec" id="sec3-3">۳.۳ تهیه جزوه کلاسی (فرصت تشویقی)</h2>
+    <p>استاد از دانشجویان داوطلب درخواست کرد که جزوه کلاسی تهیه کنند. شرایط این فرصت به‌شرح زیر است:</p>
+    <ol>
+      <li><strong>تعداد داوطلبان مطلوب:</strong> دو تا سه نفر</li>
+      <li><strong>مرحله اول:</strong> ارسال جزوه <strong>پنج جلسه اول</strong> پس از پایان آن جلسات</li>
+      <li><strong>بررسی استاد:</strong> استاد جزوه را بررسی می‌کند؛ در صورت کیفیت مطلوب، ادامه جزوه‌نویسی تا پایان ترم ادامه می‌یابد.</li>
+      <li><strong>پاداش:</strong> دانشجویانی که جزوه تهیه می‌کنند — حتی اگر جزوه کامل نباشد — <strong>نمره تشویقی</strong> دریافت می‌کنند.</li>
+      <li><strong>توزیع جزوه:</strong> اگر جزوه با کیفیت مطلوب تهیه شود، استاد آن را برای <strong>تمام دانشجویان</strong> ارسال می‌کند.</li>
+      <li><strong>فرمت ترجیحی:</strong> <strong>تایپ‌شده</strong> (به دلیل خوانایی بیشتر و امکان ارسال در سیستم اتوماسیون آموزشی؛ دست‌نویس هم در صورت خوانابودن و حجم مناسب قابل قبول است.)</li>
+    </ol>
+    <div class="ai-note">
+      🤖 <strong>توضیح هوش مصنوعی برای شفافیت:</strong> در صورت عدم ارسال جزوه توسط داوطلبان، استاد اشاره کرد که احتمالاً جزوه‌ای که خود ایشان در اختیار دارند — که دانشجویان سال‌های قبل تهیه کرده‌اند — را در اختیار دانشجویان قرار خواهند داد. با این حال تأکید شد که ممکن است برخی مباحث جدید در آن جزوه موجود نباشد.
+    </div>
+  </section>
+
+  <!-- بخش ۴ -->
+  <section class="section-card" id="sec4">
+    <h1 class="sec">🗂️ ۴. سرفصل‌های درس</h1>
+    <p>استاد سرفصل‌های این درس را به‌ترتیب زیر معرفی کرد:</p>
+
+    <h2 class="sec" id="sec4-1">۴.۱ مباحث مقدماتی (پایه)</h2>
+    <ol>
+      <li><strong>مفهوم حق</strong> — تعاریف از منظر اندیشمندان اسلامی و متفکران غربی</li>
+      <li><strong>مفهوم حقوق بشر</strong> — تعریف، ویژگی‌ها، رویکردهای متکثر از منظر رشته‌های مختلف (حقوق، علوم سیاسی، جامعه‌شناسی، الهیات)</li>
+      <li><strong>تاریخچه حقوق بشر</strong> — از شکل‌گیری تا تبدیل‌شدن به یک مکتب فکری جهانی</li>
+      <li><strong>نسبت حق و تکلیف</strong> — بررسی دوگانه حق/تکلیف در حقوق بشر اسلامی و غربی</li>
+      <li><strong>منابع حقوق بشر اسلامی</strong> — قرآن، سنت، اجماع، عقل و نحوه کاربست آن‌ها در حوزه حقوق بشر</li>
+    </ol>
+
+    <h2 class="sec" id="sec4-2">۴.۲ مباحث اصلی و اختصاصی</h2>
+    <ol start="6">
+      <li><strong>حق حیات (حق زندگی)</strong> — جایگاه حق حیات در حقوق بشر اسلامی؛ بررسی رابطه قصاص و اعدام با حق حیات</li>
+      <li><strong>کرامت انسانی</strong> — مبانی کرامت انسان در قرآن و حقوق بشر اسلامی</li>
+      <li><strong>آزادی</strong> — آزادی فردی، مذهبی و سیاسی در اسلام؛ نسبت آزادی مذهبی با حکم ارتداد؛ آزادی سیاسی و مسئله زندانیان سیاسی</li>
+      <li><strong>حقوق زنان</strong> — جایگاه زن در حقوق بشر اسلامی؛ بررسی چالش‌های مرتبط</li>
+    </ol>
+
+    <h2 class="sec" id="sec4-3">۴.۳ جلسه پایانی</h2>
+    <ol start="10">
+      <li><strong>بررسی تطبیقی حقوق بشر اسلامی و غربی</strong> — مقایسه و جمع‌بندی در یک جلسه مستقل</li>
+    </ol>
+
+    <h2 class="sec" id="sec4-4">۴.۴ مباحث احتمالی (به فراخور نیاز)</h2>
+    <ul>
+      <li><strong>برده‌داری و نژادپرستی</strong> — برده‌داری در دنیای قدیم و اشکال جدید آن در قالب نژادپرستی معاصر</li>
+    </ul>
+    <div class="ai-note">
+      🤖 <strong>توضیح هوش مصنوعی برای شفافیت:</strong> استاد تأکید کرد که مباحث دیگری نیز ممکن است به فراخور نیاز در طول ترم اضافه شوند و فهرست بالا قطعی و نهایی نیست.
+    </div>
+  </section>
+
+  <!-- بخش ۵ -->
+  <section class="section-card" id="sec5">
+    <h1 class="sec">⚖️ ۵. مفهوم حق</h1>
+    <div class="ai-note">
+      🤖 <strong>توضیح هوش مصنوعی برای شفافیت:</strong> از این بخش به بعد، مباحث درسی رسمی آغاز می‌شود.
+    </div>
+
+    <!-- ۵.۱ -->
+    <h2 class="sec" id="sec5-1">۵.۱ تعریف لغوی حق</h2>
+    <p>استاد برای شناخت ریشه مفهوم <strong>حق</strong>، به فرهنگ لغت <strong>المنجد</strong> ارجاع داد.</p>
+
+    <div class="definition">
+      <div class="def-title">📌 المنجد</div>
+      یکی از معتبرترین فرهنگ‌های لغت عربی که برای مراجعه به معانی واژگان حقوقی و دینی توصیه شد.
+    </div>
+
+    <p>در فرهنگ المنجد و منابع لغوی عربی، برای واژه «حق» معانی متعددی ذکر شده است:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>معنا</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ضد باطل</strong></td><td>آنچه باطل نیست؛ آنچه اصیل و واقعی است</td></tr>
+          <tr><td><strong>عدل / عدالت</strong></td><td>حق در معنای انصاف و دادگری</td></tr>
+          <tr><td><strong>ثبات و عدم دگرگونی</strong></td><td>موجودی که در آن تغییر ایجاد نمی‌شود</td></tr>
+          <tr><td><strong>ثبوت</strong></td><td>ثابت بودن، پابرجا بودن <em>(در زبان عربی: ثُبوت)</em></td></tr>
+          <tr><td><strong>تحقق</strong></td><td>واقعی‌شدن و به‌فعل‌درآمدن چیزی</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example">
+      <div class="ex-title">💡 مثال کلاسی</div>
+      <p>استاد برای توضیح معنای «حق به مثابه ثبات و عدم دگرگونی» از صفت «حق مطلق» برای خداوند استفاده کرد:</p>
+      <p>خداوند از آن جهت <strong>حق مطلق</strong> نامیده می‌شود که موجودی کاملاً ثابت است و در او هیچ‌گونه دگرگونی ایجاد نمی‌شود. «خدای هزاران سال پیش، با خدای امروز، و با خدای هزاران سال دیگر، همه یکی هستند.» در مقابل، انسان موجودی پر از تغییر است — چهره، جسم، فکر و حتی شخصیتش دگرگون می‌شود.</p>
+    </div>
+
+    <!-- ۵.۲ -->
+    <h2 class="sec" id="sec5-2">۵.۲ حق به مثابه مفهومی سهل‌وممتنع</h2>
+
+    <div class="definition">
+      <div class="def-title">📌 سهل‌وممتنع</div>
+      در ظاهر بسیار آسان به نظر می‌رسد، اما در باطن پر از پیچیدگی است.
+    </div>
+
+    <p>استاد تأکید کرد که <strong>حق</strong> یکی از مهم‌ترین مفاهیمی است که ویژگی «سهل‌وممتنع» بودن را دارد:</p>
+    <ul>
+      <li><strong>وجه سهل (ظاهر آسان):</strong> همه انسان‌ها تصور می‌کنند که حق را می‌شناسند، حق را تشخیص می‌دهند و «حق با آن‌هاست».</li>
+      <li><strong>وجه ممتنع (باطن دشوار):</strong> همین که هر کسی حق را به خودش نسبت می‌دهد، تعارض منافع ایجاد می‌شود و تشخیص آنچه واقعاً حق است، بسیار دشوار می‌گردد.</li>
+    </ul>
+
+    <div class="example">
+      <div class="ex-title">💡 مثال کلاسی اول</div>
+      <p>دو راننده‌ای که با هم تصادف کرده‌اند، هر دو از ماشین پیاده می‌شوند و هر کدام دیگری را مقصر می‌دانند. برای حل این تعارض ناچار به حضور افسر راهنمایی هستیم، چون هر طرف حق را به خود نسبت داده است.</p>
+    </div>
+
+    <div class="example">
+      <div class="ex-title">💡 مثال کلاسی دوم (در مقیاس بین‌المللی)</div>
+      <p>در مناقشه <strong>ایران با آمریکا و اسرائیل</strong> بر سر برنامه موشکی:</p>
+      <ul>
+        <li>ایران استدلال می‌کند: «ما حق دفاع از خود را داریم و باید موشک داشته باشیم.»</li>
+        <li>آمریکا و اسرائیل استدلال می‌کنند: «ایران موشک و تسلیحات در اختیار گروه‌های نیابتی قرار می‌دهد که امنیت منطقه را تهدید می‌کند.»</li>
+      </ul>
+      <p>وقتی این قضیه در شورای امنیت یا سازمان ملل مطرح می‌شود، هر طرف تلاش می‌کند حق را به خود نسبت دهد و تشخیص «حق واقعی» بسیار دشوار است.</p>
+    </div>
+
+    <div class="example">
+      <div class="ex-title">💡 مثال کلاسی سوم (در دادگاه)</div>
+      <p>در کرسی قضاوت، وکلای طرفین دعوا هر دو استدلال‌هایی ارائه می‌دهند که ممکن است هر دو «واجد شرایط حق بودن» باشند. قاضی باید تشخیص دهد که کدام دیدگاه حق‌تر است — و این یکی از دشوارترین وظایف قضایی است.</p>
+    </div>
+
+    <!-- ۵.۳ -->
+    <h2 class="sec" id="sec5-3">۵.۳ تعاریف حق از منظر اندیشمندان اسلامی</h2>
+    <div class="ai-note">
+      🤖 <strong>توضیح هوش مصنوعی برای شفافیت:</strong> استاد اعلام کرد که پس از تعاریف اسلامی، تعاریف اندیشمندان غربی را نیز ارائه خواهد کرد، اما به دلیل پایان‌یافتن وقت کلاس، این بخش به جلسه بعد موکول شد.
+    </div>
+
+    <h3 class="sec">۵.۳.۱ تعریف اول: حق به منزله سلطنت</h3>
+
+    <div class="definition">
+      <div class="def-title">📌 حق به منزله سلطنت</div>
+      حق به معنای <strong>حاکمیت و تسلط</strong> بر یک شیء یا یک شخص، از سوی یک انسان، دولت یا نهاد.
+    </div>
+
+    <p><strong>عناصر این تعریف:</strong></p>
+    <ol>
+      <li><strong>موضوع حق (شیء):</strong> هر چیزی که می‌توان بر آن حاکمیت داشت؛ مانند زمین، ماشین، اموال.</li>
+      <li><strong>موضوع حق (شخص):</strong> در دنیای قدیم، در قالب نظام برده‌داری، مالکیت ظاهری بر انسان دیگر وجود داشت. <em>(امروزه برده‌داری منسوخ شده است.)</em> با این حال می‌توان این مفهوم را به <strong>ولایت، سرپرستی</strong> یا <strong>نسبت میان انسان‌ها</strong> تعمیم داد؛ مانند حق سرپرستی پدر بر فرزند صغیر.</li>
+    </ol>
+
+    <div class="dispute">
+      <div class="dis-title">⚡ دیدگاه سید یزدی در این باره</div>
+      <div class="definition" style="margin-top:8px;">
+        <div class="def-title">📌 سید یزدی</div>
+        از فقهای برجسته اسلامی که این تعریف از حق را ارائه داده است.
+      </div>
+      <p>دیدگاه ایشان:</p>
+      <blockquote style="border-right:3px solid #e67e22; padding-right:12px; margin:10px 0; color:#555;">
+        «اگر <strong>شارع</strong> (قانون‌گذار دینی) مالکیت یک شخص را بر چیزی، یا سلطنت او بر شیئی را <strong>اعتبار</strong> کند، این اعتبار همان <strong>حق</strong> خواهد بود.»
+      </blockquote>
+      <p>به عبارت دیگر، در این دیدگاه، <strong>حق</strong> از <strong>اعتبار شارع</strong> نشئت می‌گیرد.</p>
+    </div>
+
+    <div class="dispute">
+      <div class="dis-title">⚡ نقد وارد بر این تعریف</div>
+      <p>منتقدان معتقدند که «سلطنت» از <strong>آثار و نتایج</strong> حق است، نه خود مفهوم حق. یعنی این تعریف به‌جای اینکه ذات حق را روشن کند، صرفاً یکی از پیامدهای آن را توصیف می‌کند.</p>
+    </div>
+
+    <div class="correction">
+      <div class="cor-title">⚠️ تذکر مهم (اصلاحیه)</div>
+      <p>بر اساس بررسی منابع معتبر فقهی، <strong>سید محمدکاظم یزدی</strong> (صاحب عروةالوثقی) در واقع <strong>منتقد</strong> تعریف «حق به منزله سلطنت» است، نه مدافع آن. ایشان معتقد است سلطنت، اثر و نتیجه حق است، نه خود حق. احتمال دارد استاد نام سید یزدی را در قالب <strong>نقد</strong> این تعریف آورده باشد. <strong>(نیاز به بازشنوایی فایل صوتی)</strong></p>
+    </div>
+
+    <hr />
+
+    <h3 class="sec">۵.۳.۲ تعریف دوم: حق به منزله ملکیت</h3>
+
+    <div class="definition">
+      <div class="def-title">📌 حق به منزله ملکیت</div>
+      حق عبارت است از <strong>مالکیتی که توسط قانون به رسمیت شناخته شده باشد.</strong> هر جا مالکیتی اعتبار شود، حقی نیز به تبع آن ایجاد می‌شود.
+    </div>
+
+    <div class="example">
+      <div class="ex-title">💡 مثال کلاسی</div>
+      <p>برای تشخیص اینکه مالک یک ماشین کیست، باید <strong>سند مالکیت</strong> تنظیم شود و به نام آن شخص باشد. این سند، <strong>حق مالکیت</strong> او را به رسمیت می‌شناسد.</p>
+    </div>
+
+    <div class="dispute">
+      <div class="dis-title">⚡ نقد وارد بر این تعریف</div>
+      <p>این تعریف نیز همان اشکال تعریف اول را دارد: <strong>ملکیت</strong> هم از آثار و نتایج حق است، نه خود ذات و مفهوم آن. بنابراین این تعریف نیز به ماهیت واقعی حق نمی‌پردازد.</p>
+    </div>
+
+    <hr />
+
+    <h3 class="sec">۵.۳.۳ تمایز میان «حق به منزله سلطنت» و «حق به منزله ملکیت»</h3>
+    <p>برخی اندیشمندان برای تمایز این دو تعریف، به <strong>ماهیت زمانی</strong> آن‌ها توجه کرده‌اند:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>ویژگی</th><th>حق به منزله سلطنت</th><th>حق به منزله ملکیت</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ماهیت زمانی</strong></td>
+            <td>معمولاً <strong>موقتی</strong> است</td>
+            <td>می‌تواند <strong>دائمی</strong> باشد</td>
+          </tr>
+          <tr>
+            <td><strong>نمونه</strong></td>
+            <td>حاکمیت سیاسی که سرانجام پایان می‌یابد</td>
+            <td>مالکیت بر ماشین که تا زمانی که صاحب آن نخواهد، باقی است</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ai-note">
+      🤖 <strong>توضیح هوش مصنوعی برای شفافیت:</strong> استاد پس از ارائه این دو تعریف، اعلام کرد که تعاریف اندیشمندان <strong>غربی</strong> از مفهوم حق را به جلسه آینده موکول می‌کند، چون وقت کلاس به پایان رسیده است.
+    </div>
+  </section>
+
+  <!-- بخش ۶ -->
+  <section class="section-card" id="sec6">
+    <h1 class="sec">🎯 ۶. نکات ظریف و کنکوری جلسه اول</h1>
+    <div class="exam-box">
+      <ul>
+        <li><strong>حق یک مفهوم سهل‌وممتنع است:</strong> همه تصور می‌کنند که حق را می‌شناسند، اما در عمل تشخیص آن بسیار دشوار است.</li>
+        <li><strong>تعاریف «حق به منزله سلطنت» و «حق به منزله ملکیت» هر دو مورد نقد قرار گرفته‌اند:</strong> زیرا هر دو به <strong>آثار و نتایج</strong> حق اشاره دارند، نه به <strong>ذات و ماهیت</strong> آن.</li>
+        <li><strong>تفاوت اصلی سلطنت و ملکیت در بحث حق:</strong> سلطنت اغلب موقتی است، اما ملکیت می‌تواند دائمی باشد.</li>
+        <li><strong>یکی از مبانی اصلی حقوق بشر غربی، «آزادی» است:</strong> لیبرالیسم از واژه «لیبرتی» (آزادی) مشتق شده و محور آزادی در آن بسیار پررنگ است.</li>
+        <li><strong>حقوق بشر اسلامی با حقوق بشر غربی هم تعارض سیاسی دارد و هم تعارض بنیادین:</strong> نمی‌توان همه اختلافات را صرفاً به دلایل سیاسی تقلیل داد؛ تفاوت‌های فکری و فرهنگی نیز وجود دارند.</li>
+        <li><strong>مبنای امتحان پایان‌ترم، مباحث کلاسی است</strong> — نه منابع معرفی‌شده.</li>
+        <li><strong>امتحان میان‌ترم وجود ندارد</strong> — تنها یک امتحان تشریحی در پایان ترم برگزار خواهد شد.</li>
+        <li><strong>کرامت انسانی در قرآن:</strong> آیه‌ای در قرآن کریم به‌صراحت بیان می‌کند که خداوند به «فرزندان آدم» (بشریت) کرامت بخشیده است. <em>(شماره دقیق آیه در کلاس ذکر نشد — نیاز به بازشنوایی فایل صوتی)</em></li>
+        <li><strong>حکم ارتداد و آزادی مذهبی:</strong> یکی از چالش‌های جدی در مباحث حقوق بشر اسلامی، نسبت میان <strong>آزادی مذهبی</strong> و <strong>حکم ارتداد</strong> است که در جلسات آتی بررسی خواهد شد.</li>
+      </ul>
+    </div>
+
+    <div class="final-note">
+      📝 <strong>یادداشت پایانی:</strong> مباحث این جلسه با <strong>تعریف مفهوم حق از منظر اندیشمندان اسلامی</strong> (دو تعریف اول) به پایان رسید. در <strong>جلسه دوم</strong>، تعاریف اندیشمندان غربی از مفهوم حق ارائه خواهد شد و سپس جمع‌بندی کاملی از مفهوم حق ارائه می‌شود تا زمینه ورود به مبحث <strong>حقوق بشر</strong> فراهم گردد.
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  درسنامه اسلام و حقوق بشر — جلسه اول &nbsp;|&nbsp; تهیه‌شده با کمک هوش مصنوعی GitHub Copilot
+</footer>
+
+</body>
+</html>
